@@ -30,7 +30,7 @@ composer require origyns/terrareach-sms-php
 
 ### 1. Initialize the Client
 
-You only need your API Key. You can also set a default Mask (Sender ID) to use across all messages.
+You need your API Key and your approved Sender ID (Mask).
 
 ```php
 require 'vendor/autoload.php';
@@ -38,15 +38,19 @@ require 'vendor/autoload.php';
 use TerraReach\Client;
 
 $apiKey = 'your_api_key_here';
-$defaultMask = 'TERRAREACH'; // Optional
+$mask = 'SenderID';
 
-$terra = new Client($apiKey, $defaultMask);
+$terra = new Client($apiKey, $mask);
 ```
 
 ### 2. Send a Single SMS
 
 ```php
+```php
 $response = $terra->sendSms('94771234567', 'Hello from TerraReach!');
+
+// You can also override the default mask for a specific message
+$response = $terra->sendSms('94771234567', 'OTP: 1234', 'OTPMASK');
 
 if ($response['status'] === 'success') {
     echo "Message sent!";
