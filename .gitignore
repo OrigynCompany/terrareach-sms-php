@@ -1,0 +1,24 @@
+# Dependency Directory
+/vendor/
+
+# Configuration & Secrets
+.env
+.env.local
+
+# Composer Specific
+composer.lock
+
+# OS Specific Files
+.DS_Store
+Thumbs.db
+
+# IDE / Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Testing / Logs
+/tests/_output/
+/tests/_support/_generated/
+*.log

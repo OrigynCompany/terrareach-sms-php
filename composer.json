@@ -1,0 +1,21 @@
+{
+    "name": "origyns/terrareach-sms-php",
+    "description": "Official PHP SDK for the TerraReach SMS Gateway.",
+    "type": "library",
+    "require": {
+        "php": "^8.0",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Origyn"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "TerraReach\\": "src/"
+        }
+    }
+}
